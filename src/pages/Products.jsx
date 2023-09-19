@@ -3,12 +3,13 @@ import Card from '../component/Card';
 import { useStateContex } from '../context/StateContex'
 
 const Products = () => {
-  const {state:{productList} , search } = useStateContex();
-  const [products , setProducts] = useState([]);
+  const {state:{products , cart}  } = useStateContex();
+console.log(cart);
+  // const [product , setProduct] = useState([]);
 
-  useEffect(()=>{
-    setProducts(productList)
-  },[productList , search])
+  // useEffect(()=>{
+  //   setProduct(products)
+  // },[products , search])
   //console.log(productList);
   return (
     <div className='flex gap-10 flex-wrap justify-center my-10'>
