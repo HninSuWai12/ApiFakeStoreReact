@@ -33,6 +33,9 @@ export const StateContexProvider =({children})=>{
                 case "Remove-From-Card":
                     return{...state , cart: state.cart.filter(item=>item.id !== action.payload.id)
                     }
+                    case "Empty":
+                        return{...state , cart:[]
+                        }
             default:
                 return state;
     }
